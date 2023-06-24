@@ -20,6 +20,7 @@ export  function DetailPage() {
     const LoadUser = async () => {
         const response = await axios.get('http://localhost:3000/users/' + id);
         console.log(response.data)
+        console.log(response.headers)
         setUser(response.data)
 
 
@@ -33,7 +34,7 @@ export  function DetailPage() {
         <div>PHONE: {user.phone}</div>
         <div>EMAIL: {user.email}</div>
         <div>WEBSITE : {user.website}</div>
-        <button onClick={()=>navigate(-1)}>GO BACK</button>
+        <button onClick={()=>navigate(-1)}> BACK</button>
     </div>
   )
 }
